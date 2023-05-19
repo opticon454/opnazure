@@ -34,5 +34,5 @@ def ipv4_range(ipaddr):
     return addrs
 
 nic = sys.argv[1]
-#print(ipv4_range('10.0.1.0/24')[1])
+#print(ipv4_range('10.128.22.0/24')[1])
 print(ipv4_range(nic)[1])

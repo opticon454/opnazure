@@ -19,14 +19,14 @@
     },
     "VNETAddress": {
       "value": [
-        "10.0.0.0/16"
+        "10.128.16.0/20"
       ]
     },
     "UntrustedSubnetCIDR": {
-      "value": "10.0.0.0/24"
+      "value": "10.128.21.0/24"
     },
     "TrustedSubnetCIDR": {
-      "value": "10.0.1.0/24"
+      "value": "10.128.22.0/24"
     },
     "existingUntrustedSubnetName": {
       "value": "Untrusted-Subnet"
@@ -47,7 +47,7 @@
       "value": false
     },
     "DeployWindowsSubnet": {
-      "value": "10.0.2.0/24"
+      "value": "10.128.23.0/24"
     },
     "existingWindowsSubnet": {
       "value": "Windows-VM-Subnet"

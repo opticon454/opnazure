@@ -51,7 +51,7 @@
     "VNETAddress": {
       "type": "array",
       "defaultValue": [
-        "10.0.0.0/16"
+        "10.128.16.0/20"
       ],
       "metadata": {
         "description": "Virtual Network Address Space. Only required if you want to create a new VNet."
@@ -59,14 +59,14 @@
     },
     "UntrustedSubnetCIDR": {
       "type": "string",
-      "defaultValue": "10.0.0.0/24",
+      "defaultValue": "10.128.21.0/24",
       "metadata": {
         "description": "Untrusted-Subnet Address Space. Only required if you want to create a new VNet."
       }
     },
     "TrustedSubnetCIDR": {
       "type": "string",
-      "defaultValue": "10.0.1.0/24",
+      "defaultValue": "10.128.22.0/24",
       "metadata": {
         "description": "Trusted-Subnet Address Space. Only required if you want to create a new VNet."
       }
@@ -147,7 +147,7 @@
     },
     "DeployWindowsSubnet": {
       "type": "string",
-      "defaultValue": "10.0.2.0/24",
+      "defaultValue": "10.128.23.0/24",
       "metadata": {
         "description": "In case of deploying Windows in a New VNet this will be the Windows VM Subnet Address Space"
       }

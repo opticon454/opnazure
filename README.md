@@ -72,9 +72,9 @@ There are 3 different deployment scenarios:
 
 - Active-Active:
     1) VNET with Two Subnets and OPNsense VM with two NICs.
-    2) VNET Address space is: 10.0.0.0/16 (suggested Address space, you may change that).
-    3) External NIC named Untrusted Linked to Untrusted-Subnet (10.0.0.0/24).
-    4) Internal NIC named Trusted Linked to Trusted-Subnet (10.0.1.0/24).
+    2) VNET Address space is: 10.128.16.0/20 (suggested Address space, you may change that).
+    3) External NIC named Untrusted Linked to Untrusted-Subnet (10.128.21.0/24).
+    4) Internal NIC named Trusted Linked to Trusted-Subnet (10.128.22.0/24).
     5) It creates a NSG named OPN-NSG which allows incoming SSH and HTTPS. Same NSG is associated to both Subnets.
     6) Active-Active a Internal and External loadbalancer will be created.
     7) Two OPNsense firewalls will be created.
@@ -84,16 +84,16 @@ There are 3 different deployment scenarios:
 
 - TwoNics:
     1) VNET with Two Subnets and OPNsense VM with two NICs.
-    2) VNET Address space is: 10.0.0.0/16 (suggested Address space, you may change that).
-    3) External NIC named Untrusted Linked to Untrusted-Subnet (10.0.0.0/24).
-    4) Internal NIC named Trusted Linked to Trusted-Subnet (10.0.1.0/24).
+    2) VNET Address space is: 10.128.16.0/20 (suggested Address space, you may change that).
+    3) External NIC named Untrusted Linked to Untrusted-Subnet (10.128.21.0/24).
+    4) Internal NIC named Trusted Linked to Trusted-Subnet (10.128.22.0/24).
     5) It creates a NSG named OPN-NSG which allows incoming SSH and HTTPS. Same NSG is associated to both Subnets.
     6) Option to deploy Windows management VM. (This option requires a management subnet to be created)
 
 - SingleNic:
     1) VNET with single Subnet and OPNsense VM with single NIC.
-    2) VNET Address space is: 10.0.0.0/16 (suggested Address space, you may change that).
-    3) External NIC named Untrusted Linked to Untrusted-Subnet (10.0.0.0/24).
+    2) VNET Address space is: 10.128.16.0/20 (suggested Address space, you may change that).
+    3) External NIC named Untrusted Linked to Untrusted-Subnet (10.128.21.0/24).
     4) It creates a NSG named OPN-NSG which allows incoming SSH and HTTPS.
     5) Option to deploy Windows management VM. (This option requires a management subnet to be created)
 

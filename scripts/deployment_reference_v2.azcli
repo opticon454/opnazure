@@ -31,13 +31,13 @@ az group delete -g $RG -y
 $RG='opnsense-active-active-existing-vnet'
 $DEPNAME='opnsense-active-active-existing-vnet'
 $VNET='OPN-VNET'
-$VNETAddress='10.0.0.0/16'
+$VNETAddress='10.128.16.0/20'
 $UntrustedSubnet='Untrusted-Subnet'
-$UntrustedSubnetAddress='10.0.0.0/24'
+$UntrustedSubnetAddress='10.128.21.0/24'
 $TrustedSubnet='Trusted-Subnet'
-$TrustedSubnetAddress='10.0.1.0/24'
+$TrustedSubnetAddress='10.128.22.0/24'
 $existingWindowsSubnet='Windows-VM-Subnet'
-$existingWindowsSubnetAddress='10.0.2.0/24'
+$existingWindowsSubnetAddress='10.128.23.0/24'
 az group create -l centralus -g $RG
 az network vnet create -g $RG -n $VNET --address-prefixes $VNETAddress
 az network vnet subnet create -g $RG --vnet-name $VNET -n $UntrustedSubnet --address-prefixes $UntrustedSubnetAddress
@@ -71,13 +71,13 @@ az deployment group create -g $RG -n $DEPNAME -f .\main.bicep -p .\main.paramete
 $RG='opnsense-twonics-existing-vnet'
 $DEPNAME='opnsense-twonics-existing-vnet'
 $VNET='OPN-VNET'
-$VNETAddress='10.0.0.0/16'
+$VNETAddress='10.128.16.0/20'
 $UntrustedSubnet='Untrusted-Subnet'
-$UntrustedSubnetAddress='10.0.0.0/24'
+$UntrustedSubnetAddress='10.128.21.0/24'
 $TrustedSubnet='Trusted-Subnet'
-$TrustedSubnetAddress='10.0.1.0/24'
+$TrustedSubnetAddress='10.128.22.0/24'
 $existingWindowsSubnet='Windows-VM-Subnet'
-$existingWindowsSubnetAddress='10.0.2.0/24'
+$existingWindowsSubnetAddress='10.128.23.0/24'
 az group create -l centralus -g $RG
 az network vnet create -g $RG -n $VNET --address-prefixes $VNETAddress
 az network vnet subnet create -g $RG --vnet-name $VNET -n $UntrustedSubnet --address-prefixes $UntrustedSubnetAddress
@@ -112,11 +112,11 @@ az deployment group create -g $RG -n $DEPNAME -f .\main.bicep -p .\main.paramete
 $RG='opnsense-singlenic-existing-vnet'
 $DEPNAME='opnsense-singlenic-existing-vnet'
 $VNET='OPN-VNET'
-$VNETAddress='10.0.0.0/16'
+$VNETAddress='10.128.16.0/20'
 $UntrustedSubnet='Untrusted-Subnet'
-$UntrustedSubnetAddress='10.0.0.0/24'
+$UntrustedSubnetAddress='10.128.21.0/24'
 $existingWindowsSubnet='Windows-VM-Subnet'
-$existingWindowsSubnetAddress='10.0.2.0/24'
+$existingWindowsSubnetAddress='10.128.23.0/24'
 az group create -l centralus -g $RG
 az network vnet create -g $RG -n $VNET --address-prefixes $VNETAddress
 az network vnet subnet create -g $RG --vnet-name $VNET -n $UntrustedSubnet --address-prefixes $UntrustedSubnetAddress
